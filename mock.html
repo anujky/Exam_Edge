@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Test Application</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Mock Test</h1>
+            <div class="timer" id="timer">Time Left: <span id="time">60:00</span></div>
+        </div>
+        
+        <div class="main-content">
+            <div class="question-container">
+                <div class="question-number">Question <span id="currentQuestionNum">1</span> of <span id="totalQuestions">10</span></div>
+                <div class="question" id="question">Loading question...</div>
+                <div class="options" id="options">
+                    <!-- Options will be dynamically loaded -->
+                </div>
+                <div class="button-group">
+                    <button id="markReview" class="btn review">Mark for Review</button>
+                    <button id="clearResponse" class="btn clear">Clear Response</button>
+                </div>
+            </div>
+            
+            <div class="navigation">
+                <button id="prevBtn" class="nav-btn">Previous</button>
+                <button id="nextBtn" class="nav-btn">Next</button>
+                <button id="submitTest" class="submit-btn">Submit Test</button>
+            </div>
+        </div>
+        
+        <div class="question-palette">
+            <h3>Question Palette</h3>
+            <div class="palette-info">
+                <div class="info-item"><span class="dot not-visited"></span> Not Visited</div>
+                <div class="info-item"><span class="dot not-answered"></span> Not Answered</div>
+                <div class="info-item"><span class="dot answered"></span> Answered</div>
+                <div class="info-item"><span class="dot marked-review"></span> Marked for Review</div>
+            </div>
+            <div class="question-grid" id="questionGrid">
+                <!-- Question numbers will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="modal">
+        <div class="modal-content">
+            <h2>Test Results</h2>
+            <div id="resultsContent"></div>
+            <button id="closeModal" class="btn">Close</button>
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
